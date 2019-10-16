@@ -107,7 +107,7 @@ def my_compare(ds1, ds2) :
 
 # main program  ----------------------------------------------------------------
 
-# open the file in the path
+# load data from the file in the path
 filePath = input('Please input the path to the json file (e.g. C:\\...\\05): ')
 fileName = input('Please input the name of the file (e.g. H1-1.json): ')
 data = loadData(filePath.strip() + '\\' + fileName.strip())
