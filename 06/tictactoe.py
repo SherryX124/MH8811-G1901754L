@@ -1,5 +1,5 @@
 def TicTacDraw(board):
-    # match symbols with numbers in the list
+    # match symbols with numbers 0,1,2 in the list
     lst = [' O ',' X ','   ']
 
     for i in range(0,len(board)) :
@@ -10,13 +10,9 @@ def TicTacDraw(board):
         # print the line
         for num in board[i] :
             line = line + lst[num] + '|'
-        print(line.strip('|'))
+        line = line.strip('|')
+        print(line)
 
-        # print separate line with the same length but do not print the last one
+        # print separate line in the same length but do not print for the last line
         if i != len(board)-1 :
             print('-' * len(line))
-
-
-# # test
-# board = [[0,1,2,0,1],[2,0,0,2,0],[1,1,2,1,1],[1,2,0,1,2]]
-# TicTacDraw(board)

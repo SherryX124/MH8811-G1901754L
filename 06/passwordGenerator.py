@@ -30,16 +30,53 @@ def genPassword(n):
 
     return password
 
+
 if __name__ == "__main__" :
     print(genPassword(12))
 
 
-    # numInt = random.randint(1,n-3)
-    # numLower = random.randint(1,n-numInt-2)
-    # numUpper = random.randint(1,n-numInt-numLower-1)
-    # numSymbol = n - numInt - numLower - numUpper
+# # -------------------------------------------------------------
+# # Another approach to do this
 
-    # integer = random.randint(0, 9)
-    # lower = random.choice('abcdefghijklmnopqrstuvwxyz')
-    # upper = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-    # symbol = random.choice('!@#$%^&*()_+=-:;\'<>,.|')
+# from random import randint, choice, shuffle
+
+# def genPassword(n):
+#     lst = list()
+#     password = ''
+
+#     # determine the numbers for each category
+#     numInt = randint(1, n-3)
+#     numLower = randint(1, n-numInt-2)
+#     numUpper = randint(1, n-numInt-numLower-1)
+#     numSymbol = n - numInt - numLower - numUpper
+
+
+#     # generate 0-9
+#     for i in range(0,numInt) :
+#         lst.append(randint(0, 9))
+
+#     # generate lowercase letters
+#     for i in range(0,numLower) :
+#         lst.append(chr(randint(97, 122)))
+
+#     # generate uppercase letters
+#     for i in range(0,numUpper) :
+#         lst.append(chr(randint(65, 90)))
+
+#     # generate symbols
+#     for i in range(0,numSymbol) :
+#         lst.append(choice('~`!@#$%^&*_:;\',.|/\\'))
+
+
+#     # rearrange the list
+#     shuffle(lst)
+
+#     # transfer to string
+#     for i in range(0,n):
+#         password = password + str(lst[i])
+
+#     return password
+
+
+# if __name__ == "__main__" :
+#     print(genPassword(12))
